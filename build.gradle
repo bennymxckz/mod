@@ -81,5 +81,7 @@ publishing {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8'
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+    // Add the required Java module for the lightweight HTTP server
+    options.compilerArgs.addAll(['--add-modules', 'jdk.httpserver'])
 }

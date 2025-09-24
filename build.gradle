@@ -19,23 +19,22 @@ base {
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 runs {
-    configureEach {
-        systemProperty 'forge.logging.markers', 'REGISTRIES'
-        systemProperty 'forge.logging.console.level', 'debug'
-        modSource project.sourceSets.main
-    }
-    client {
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-    }
-    server {
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-        argument '--nogui'
-    }
-    gameTestServer {
-        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-    }
     data {
-        arguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        workingDirectory project.file('run-data')
+        args.addAll '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+    }
+
+    server {
+        workingDirectory project.file('run-server')
+        args.add '--nogui'
+    }
+
+    client {
+        workingDirectory project.file('run-client')
+    }
+
+    gameTestServer {
+        workingDirectory project.file('run-gametestserver')
     }
 }
 

@@ -1,0 +1,13 @@
+{
+  "itemGroup.craftoriadashboard": "Example Mod Tab",
+  "block.craftoriadashboard.example_block": "Example Block",
+  "item.craftoriadashboard.example_item": "Example Item",
+
+  "craftoriadashboard.configuration.title": "Craftoria Dashboard Configs",
+  "craftoriadashboard.configuration.section.craftoriadashboard.common.toml": "Craftoria Dashboard Configs",
+  "craftoriadashboard.configuration.section.craftoriadashboard.common.toml.title": "Craftoria Dashboard Configs",
+  "craftoriadashboard.configuration.items": "Item List",
+  "craftoriadashboard.configuration.logDirtBlock": "Log Dirt Block",
+  "craftoriadashboard.configuration.magicNumberIntroduction": "Magic Number Text",
+  "craftoriadashboard.configuration.magicNumber": "Magic Number"
+}
